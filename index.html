@@ -39,16 +39,11 @@
 
 <h2>Screenshots</h2>
 
-<table cellpadding="5" border="0" width="100%" style="border:0px;">
-<tr>
-	<td style="border:0px;"><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image1.png?raw=true"></td>
-	<td style="border:0px;"><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image2.png?raw=true"></td>
-</tr>
-<tr>
-	<td style="border:0px;"><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image3.png?raw=true"></td>
-	<td style="border:0px;"></td>
-</tr>
-</table>
+<div>
+<img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image1.png?raw=true">
+<img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image2.png?raw=true">
+<img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image3.png?raw=true">
+</div>
 
 <h2>Features</h2>
 
@@ -62,6 +57,30 @@
 <li>Simple delegate model.</li>
 <li>You can specify current color selection and title for header.</li>
 </ul><h2>Usage</h2>
+
+<p>In your view controller where you want to invoke the color picker, first implement the methods of the delegate:</p>
+
+<pre><code>@implementation MyViewController &lt;NEOColorPickerViewControllerDelegate&gt;
+</code></pre>
+
+<p>Assuming you want to launch the view controller in response to a button being clicked, setup and launch an instance of NEOColorPickerViewController:</p>
+
+<pre><code>NEOColorPickerViewController *controller = [[NEOColorPickerViewController alloc] init];
+controller.delegate = self;
+controller.currentColor = &lt;some initial color reference&gt;;
+controller.dialogTitle = @"My dialog title";
+
+[self presentViewController:controller animated:YES completion:nil];
+</code></pre>
+
+<p>Finally handle the color picker delegate callback when the color is selected. You can also implement an optional callback that is called when the color picker is dismissed:</p>
+
+<pre><code>- (void) colorPickerViewController:(NEOColorPickerBaseViewController *)controller didSelectColor:(UIColor *)color {
+    // Do something with the color.    
+    self.view.backgroundColor = color;
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+</code></pre>
       </section>
     </div>
 
