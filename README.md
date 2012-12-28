@@ -27,3 +27,23 @@ Features
 
 Usage
 -----
+In your view controller where you want to invoke the color picker, first implement the methods of the delegate:
+
+    @implementation MyViewController <NEOColorPickerViewControllerDelegate>
+    
+Assuming you want to launch the view controller in response to a button being clicked, setup and launch an instance of NEOColorPickerViewController:
+
+    NEOColorPickerViewController *controller = [[NEOColorPickerViewController alloc] init];
+    controller.delegate = self;
+    controller.currentColor = <some initial color reference>;
+    controller.dialogTitle = @"My dialog title";
+    
+    [self presentViewController:controller animated:YES completion:nil];
+    
+Finally handle the color picker delegate callback when the color is selected. You can also implement an optional callback that is called when the color picker is dismissed:
+
+    - (void) colorPickerViewController:(NEOColorPickerBaseViewController *)controller didSelectColor:(UIColor *)color {
+        // Do something with the color.    
+        self.view.backgroundColor = color;
+        [controller dismissViewControllerAnimated:YES completion:nil];
+    }
