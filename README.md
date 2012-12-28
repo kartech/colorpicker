@@ -47,3 +47,7 @@ Finally handle the color picker delegate callback when the color is selected. Yo
         self.view.backgroundColor = color;
         [controller dismissViewControllerAnimated:YES completion:nil];
     }
+
+License
+-------
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
