@@ -8,9 +8,9 @@ A color picker is the most conspicuously absent component in the collection of b
 
 Screenshots
 -------
-![Simple selector](blob/master/etc/image1.png?raw=true)
-![Hue Grid selector](blob/master/etc/image2.png?raw=true)
-![HSL selector](blob/master/etc/image3.png?raw=true)
+![Simple selector](colorpicker/blob/master/etc/image1.png?raw=true)
+![Hue Grid selector](colorpicker/blob/master/etc/image2.png?raw=true)
+![HSL selector](colorpicker/blob/master/etc/image3.png?raw=true)
 
 
 Features
