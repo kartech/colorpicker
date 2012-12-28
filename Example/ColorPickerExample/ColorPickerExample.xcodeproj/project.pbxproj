@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EBDE20F168DFCAF0081C060 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE20E168DFCAF0081C060 /* UIKit.framework */; };
+		9EBDE211168DFCAF0081C060 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE210168DFCAF0081C060 /* Foundation.framework */; };
+		9EBDE213168DFCAF0081C060 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE212168DFCAF0081C060 /* CoreGraphics.framework */; };
+		9EBDE219168DFCAF0081C060 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE217168DFCAF0081C060 /* InfoPlist.strings */; };
+		9EBDE21B168DFCAF0081C060 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE21A168DFCAF0081C060 /* main.m */; };
+		9EBDE21F168DFCAF0081C060 /* NEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE21E168DFCAF0081C060 /* NEOAppDelegate.m */; };
+		9EBDE221168DFCAF0081C060 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE220168DFCAF0081C060 /* Default.png */; };
+		9EBDE223168DFCAF0081C060 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE222168DFCAF0081C060 /* Default@2x.png */; };
+		9EBDE225168DFCAF0081C060 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE224168DFCAF0081C060 /* Default-568h@2x.png */; };
+		9EBDE228168DFCAF0081C060 /* NEOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE227168DFCAF0081C060 /* NEOViewController.m */; };
+		9EBDE22B168DFCAF0081C060 /* NEOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE229168DFCAF0081C060 /* NEOViewController.xib */; };
+		9EBDE26B168E01550081C060 /* NEOColorPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE25B168E01550081C060 /* NEOColorPickerBaseViewController.m */; };
+		9EBDE26C168E01550081C060 /* NEOColorPickerFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE25D168E01550081C060 /* NEOColorPickerFavoritesViewController.m */; };
+		9EBDE26D168E01550081C060 /* NEOColorPickerFavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE25E168E01550081C060 /* NEOColorPickerFavoritesViewController.xib */; };
+		9EBDE26E168E01550081C060 /* NEOColorPickerGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE260168E01550081C060 /* NEOColorPickerGradientView.m */; };
+		9EBDE26F168E01550081C060 /* NEOColorPickerHSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE262168E01550081C060 /* NEOColorPickerHSLViewController.m */; };
+		9EBDE270168E01550081C060 /* NEOColorPickerHSLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE263168E01550081C060 /* NEOColorPickerHSLViewController.xib */; };
+		9EBDE271168E01550081C060 /* NEOColorPickerHueGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE265168E01550081C060 /* NEOColorPickerHueGridViewController.m */; };
+		9EBDE272168E01550081C060 /* NEOColorPickerHueGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE266168E01550081C060 /* NEOColorPickerHueGridViewController.xib */; };
+		9EBDE273168E01550081C060 /* NEOColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE268168E01550081C060 /* NEOColorPickerViewController.m */; };
+		9EBDE274168E01550081C060 /* NEOColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE269168E01550081C060 /* NEOColorPickerViewController.xib */; };
+		9EBDE275168E01550081C060 /* colorPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE26A168E01550081C060 /* colorPicker.bundle */; };
+		9EBDE277168E01EE0081C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE276168E01EE0081C060 /* QuartzCore.framework */; };
+		9EBDE27A168E02970081C060 /* UIColor+NEOColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE279168E02970081C060 /* UIColor+NEOColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9EBDE20A168DFCAF0081C060 /* ColorPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBDE20E168DFCAF0081C060 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9EBDE210168DFCAF0081C060 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9EBDE212168DFCAF0081C060 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9EBDE216168DFCAF0081C060 /* ColorPickerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorPickerExample-Info.plist"; sourceTree = "<group>"; };
+		9EBDE218168DFCAF0081C060 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9EBDE21A168DFCAF0081C060 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9EBDE21C168DFCAF0081C060 /* ColorPickerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorPickerExample-Prefix.pch"; sourceTree = "<group>"; };
+		9EBDE21D168DFCAF0081C060 /* NEOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEOAppDelegate.h; sourceTree = "<group>"; };
+		9EBDE21E168DFCAF0081C060 /* NEOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEOAppDelegate.m; sourceTree = "<group>"; };
+		9EBDE220168DFCAF0081C060 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9EBDE222168DFCAF0081C060 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9EBDE224168DFCAF0081C060 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9EBDE226168DFCAF0081C060 /* NEOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEOViewController.h; sourceTree = "<group>"; };
+		9EBDE227168DFCAF0081C060 /* NEOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEOViewController.m; sourceTree = "<group>"; };
+		9EBDE22A168DFCAF0081C060 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NEOViewController.xib; sourceTree = "<group>"; };
+		9EBDE25A168E01550081C060 /* NEOColorPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerBaseViewController.h; sourceTree = "<group>"; };
+		9EBDE25B168E01550081C060 /* NEOColorPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerBaseViewController.m; sourceTree = "<group>"; };
+		9EBDE25C168E01550081C060 /* NEOColorPickerFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerFavoritesViewController.h; sourceTree = "<group>"; };
+		9EBDE25D168E01550081C060 /* NEOColorPickerFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerFavoritesViewController.m; sourceTree = "<group>"; };
+		9EBDE25E168E01550081C060 /* NEOColorPickerFavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NEOColorPickerFavoritesViewController.xib; sourceTree = "<group>"; };
+		9EBDE25F168E01550081C060 /* NEOColorPickerGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerGradientView.h; sourceTree = "<group>"; };
+		9EBDE260168E01550081C060 /* NEOColorPickerGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerGradientView.m; sourceTree = "<group>"; };
+		9EBDE261168E01550081C060 /* NEOColorPickerHSLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerHSLViewController.h; sourceTree = "<group>"; };
+		9EBDE262168E01550081C060 /* NEOColorPickerHSLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerHSLViewController.m; sourceTree = "<group>"; };
+		9EBDE263168E01550081C060 /* NEOColorPickerHSLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NEOColorPickerHSLViewController.xib; sourceTree = "<group>"; };
+		9EBDE264168E01550081C060 /* NEOColorPickerHueGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerHueGridViewController.h; sourceTree = "<group>"; };
+		9EBDE265168E01550081C060 /* NEOColorPickerHueGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerHueGridViewController.m; sourceTree = "<group>"; };
+		9EBDE266168E01550081C060 /* NEOColorPickerHueGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NEOColorPickerHueGridViewController.xib; sourceTree = "<group>"; };
+		9EBDE267168E01550081C060 /* NEOColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerViewController.h; sourceTree = "<group>"; };
+		9EBDE268168E01550081C060 /* NEOColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerViewController.m; sourceTree = "<group>"; };
+		9EBDE269168E01550081C060 /* NEOColorPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NEOColorPickerViewController.xib; sourceTree = "<group>"; };
+		9EBDE26A168E01550081C060 /* colorPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = colorPicker.bundle; sourceTree = "<group>"; };
+		9EBDE276168E01EE0081C060 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9EBDE278168E02970081C060 /* UIColor+NEOColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NEOColor.h"; sourceTree = "<group>"; };
+		9EBDE279168E02970081C060 /* UIColor+NEOColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NEOColor.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EBDE207168DFCAF0081C060 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBDE277168E01EE0081C060 /* QuartzCore.framework in Frameworks */,
+				9EBDE20F168DFCAF0081C060 /* UIKit.framework in Frameworks */,
+				9EBDE211168DFCAF0081C060 /* Foundation.framework in Frameworks */,
+				9EBDE213168DFCAF0081C060 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9EBDE1FF168DFCAF0081C060 = {
+			isa = PBXGroup;
+			children = (
+				9EBDE259168E01550081C060 /* Source */,
+				9EBDE214168DFCAF0081C060 /* ColorPickerExample */,
+				9EBDE20D168DFCAF0081C060 /* Frameworks */,
+				9EBDE20B168DFCAF0081C060 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9EBDE20B168DFCAF0081C060 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EBDE20A168DFCAF0081C060 /* ColorPickerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EBDE20D168DFCAF0081C060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EBDE276168E01EE0081C060 /* QuartzCore.framework */,
+				9EBDE20E168DFCAF0081C060 /* UIKit.framework */,
+				9EBDE210168DFCAF0081C060 /* Foundation.framework */,
+				9EBDE212168DFCAF0081C060 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EBDE214168DFCAF0081C060 /* ColorPickerExample */ = {
+			isa = PBXGroup;
+			children = (
+				9EBDE21D168DFCAF0081C060 /* NEOAppDelegate.h */,
+				9EBDE21E168DFCAF0081C060 /* NEOAppDelegate.m */,
+				9EBDE226168DFCAF0081C060 /* NEOViewController.h */,
+				9EBDE227168DFCAF0081C060 /* NEOViewController.m */,
+				9EBDE229168DFCAF0081C060 /* NEOViewController.xib */,
+				9EBDE215168DFCAF0081C060 /* Supporting Files */,
+			);
+			path = ColorPickerExample;
+			sourceTree = "<group>";
+		};
+		9EBDE215168DFCAF0081C060 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EBDE216168DFCAF0081C060 /* ColorPickerExample-Info.plist */,
+				9EBDE217168DFCAF0081C060 /* InfoPlist.strings */,
+				9EBDE21A168DFCAF0081C060 /* main.m */,
+				9EBDE21C168DFCAF0081C060 /* ColorPickerExample-Prefix.pch */,
+				9EBDE220168DFCAF0081C060 /* Default.png */,
+				9EBDE222168DFCAF0081C060 /* Default@2x.png */,
+				9EBDE224168DFCAF0081C060 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EBDE259168E01550081C060 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9EBDE26A168E01550081C060 /* colorPicker.bundle */,
+				9EBDE25A168E01550081C060 /* NEOColorPickerBaseViewController.h */,
+				9EBDE25B168E01550081C060 /* NEOColorPickerBaseViewController.m */,
+				9EBDE25C168E01550081C060 /* NEOColorPickerFavoritesViewController.h */,
+				9EBDE25D168E01550081C060 /* NEOColorPickerFavoritesViewController.m */,
+				9EBDE25E168E01550081C060 /* NEOColorPickerFavoritesViewController.xib */,
+				9EBDE25F168E01550081C060 /* NEOColorPickerGradientView.h */,
+				9EBDE260168E01550081C060 /* NEOColorPickerGradientView.m */,
+				9EBDE261168E01550081C060 /* NEOColorPickerHSLViewController.h */,
+				9EBDE262168E01550081C060 /* NEOColorPickerHSLViewController.m */,
+				9EBDE263168E01550081C060 /* NEOColorPickerHSLViewController.xib */,
+				9EBDE264168E01550081C060 /* NEOColorPickerHueGridViewController.h */,
+				9EBDE265168E01550081C060 /* NEOColorPickerHueGridViewController.m */,
+				9EBDE266168E01550081C060 /* NEOColorPickerHueGridViewController.xib */,
+				9EBDE267168E01550081C060 /* NEOColorPickerViewController.h */,
+				9EBDE268168E01550081C060 /* NEOColorPickerViewController.m */,
+				9EBDE269168E01550081C060 /* NEOColorPickerViewController.xib */,
+				9EBDE278168E02970081C060 /* UIColor+NEOColor.h */,
+				9EBDE279168E02970081C060 /* UIColor+NEOColor.m */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EBDE209168DFCAF0081C060 /* ColorPickerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EBDE22E168DFCAF0081C060 /* Build configuration list for PBXNativeTarget "ColorPickerExample" */;
+			buildPhases = (
+				9EBDE206168DFCAF0081C060 /* Sources */,
+				9EBDE207168DFCAF0081C060 /* Frameworks */,
+				9EBDE208168DFCAF0081C060 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorPickerExample;
+			productName = ColorPickerExample;
+			productReference = 9EBDE20A168DFCAF0081C060 /* ColorPickerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EBDE201168DFCAF0081C060 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NEO;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Karthik Abram";
+			};
+			buildConfigurationList = 9EBDE204168DFCAF0081C060 /* Build configuration list for PBXProject "ColorPickerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9EBDE1FF168DFCAF0081C060;
+			productRefGroup = 9EBDE20B168DFCAF0081C060 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EBDE209168DFCAF0081C060 /* ColorPickerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EBDE208168DFCAF0081C060 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBDE219168DFCAF0081C060 /* InfoPlist.strings in Resources */,
+				9EBDE221168DFCAF0081C060 /* Default.png in Resources */,
+				9EBDE223168DFCAF0081C060 /* Default@2x.png in Resources */,
+				9EBDE225168DFCAF0081C060 /* Default-568h@2x.png in Resources */,
+				9EBDE22B168DFCAF0081C060 /* NEOViewController.xib in Resources */,
+				9EBDE26D168E01550081C060 /* NEOColorPickerFavoritesViewController.xib in Resources */,
+				9EBDE270168E01550081C060 /* NEOColorPickerHSLViewController.xib in Resources */,
+				9EBDE272168E01550081C060 /* NEOColorPickerHueGridViewController.xib in Resources */,
+				9EBDE274168E01550081C060 /* NEOColorPickerViewController.xib in Resources */,
+				9EBDE275168E01550081C060 /* colorPicker.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EBDE206168DFCAF0081C060 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBDE21B168DFCAF0081C060 /* main.m in Sources */,
+				9EBDE21F168DFCAF0081C060 /* NEOAppDelegate.m in Sources */,
+				9EBDE228168DFCAF0081C060 /* NEOViewController.m in Sources */,
+				9EBDE26B168E01550081C060 /* NEOColorPickerBaseViewController.m in Sources */,
+				9EBDE26C168E01550081C060 /* NEOColorPickerFavoritesViewController.m in Sources */,
+				9EBDE26E168E01550081C060 /* NEOColorPickerGradientView.m in Sources */,
+				9EBDE26F168E01550081C060 /* NEOColorPickerHSLViewController.m in Sources */,
+				9EBDE271168E01550081C060 /* NEOColorPickerHueGridViewController.m in Sources */,
+				9EBDE273168E01550081C060 /* NEOColorPickerViewController.m in Sources */,
+				9EBDE27A168E02970081C060 /* UIColor+NEOColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9EBDE217168DFCAF0081C060 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EBDE218168DFCAF0081C060 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9EBDE229168DFCAF0081C060 /* NEOViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EBDE22A168DFCAF0081C060 /* en */,
+			);
+			name = NEOViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EBDE22C168DFCAF0081C060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9EBDE22D168DFCAF0081C060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EBDE22F168DFCAF0081C060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorPickerExample/ColorPickerExample-Prefix.pch";
+				INFOPLIST_FILE = "ColorPickerExample/ColorPickerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9EBDE230168DFCAF0081C060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorPickerExample/ColorPickerExample-Prefix.pch";
+				INFOPLIST_FILE = "ColorPickerExample/ColorPickerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EBDE204168DFCAF0081C060 /* Build configuration list for PBXProject "ColorPickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBDE22C168DFCAF0081C060 /* Debug */,
+				9EBDE22D168DFCAF0081C060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EBDE22E168DFCAF0081C060 /* Build configuration list for PBXNativeTarget "ColorPickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBDE22F168DFCAF0081C060 /* Debug */,
+				9EBDE230168DFCAF0081C060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EBDE201168DFCAF0081C060 /* Project object */;
+}
