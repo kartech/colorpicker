@@ -15,7 +15,14 @@ Screenshots
 
 Features
 -------
-
+* Shows a simple color pallete (simplifies the simple case).
+* iPhone 5 ready - color pallete expands to fill larger screen.
+* Hue grid - more variations of primary color. Color line in the bottom can be tapped to select color or grid can be swiped left and right.
+* HSL selector - for fine grain color selection, presents Hue circle and separate saturation and luminosity controls.
+* Alpha selector
+* Allows users to save their favorite colors. Favorites are stored in a file in the Documents directory.
+* Simple delegate model.
+* You can specify current color selection and title for header.
 
 
 Usage
