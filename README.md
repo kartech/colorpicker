@@ -27,6 +27,8 @@ Features
 
 Usage
 -----
+Copy the files within the Source folder into your project. The colorPicker.bundle file contains the graphical sources.
+
 In your view controller where you want to invoke the color picker, first implement the methods of the delegate:
 
     @implementation MyViewController <NEOColorPickerViewControllerDelegate>
