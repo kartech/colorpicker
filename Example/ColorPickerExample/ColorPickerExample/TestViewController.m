@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 Neovera.
 //
 
-#import "NEOViewController.h"
+#import "TestViewController.h"
 #import "NEOColorPickerViewController.h"
 
-@interface NEOViewController () <NEOColorPickerViewControllerDelegate>
+@interface TestViewController () <NEOColorPickerViewControllerDelegate>
 
 @property (nonatomic, strong) UIColor *currentColor;
 
 @end
 
-@implementation NEOViewController
+@implementation TestViewController
 
 - (id) init {
     if (self = [super init]) {
@@ -39,7 +39,7 @@
 - (IBAction)buttonPressPickColor:(id)sender {
     NEOColorPickerViewController *controller = [[NEOColorPickerViewController alloc] init];
     controller.delegate = self;
-    controller.currentColor = self.currentColor;
+    controller.selectedColor = self.currentColor;
     controller.dialogTitle = @"Example";
     
     [self presentViewController:controller animated:YES completion:nil];

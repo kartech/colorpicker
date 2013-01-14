@@ -8,7 +8,7 @@
 
 #import "NEOAppDelegate.h"
 
-#import "NEOViewController.h"
+#import "TestViewController.h"
 
 @implementation NEOAppDelegate
 
@@ -16,7 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[NEOViewController alloc] initWithNibName:@"NEOViewController" bundle:nil];
+    self.viewController = [[TestViewController alloc] initWithNibName:@"NEOViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

@@ -16,8 +16,8 @@
 		9EBDE221168DFCAF0081C060 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE220168DFCAF0081C060 /* Default.png */; };
 		9EBDE223168DFCAF0081C060 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE222168DFCAF0081C060 /* Default@2x.png */; };
 		9EBDE225168DFCAF0081C060 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE224168DFCAF0081C060 /* Default-568h@2x.png */; };
-		9EBDE228168DFCAF0081C060 /* NEOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE227168DFCAF0081C060 /* NEOViewController.m */; };
-		9EBDE22B168DFCAF0081C060 /* NEOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE229168DFCAF0081C060 /* NEOViewController.xib */; };
+		9EBDE228168DFCAF0081C060 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE227168DFCAF0081C060 /* TestViewController.m */; };
+		9EBDE22B168DFCAF0081C060 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE229168DFCAF0081C060 /* TestViewController.xib */; };
 		9EBDE26B168E01550081C060 /* NEOColorPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE25B168E01550081C060 /* NEOColorPickerBaseViewController.m */; };
 		9EBDE26C168E01550081C060 /* NEOColorPickerFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDE25D168E01550081C060 /* NEOColorPickerFavoritesViewController.m */; };
 		9EBDE26D168E01550081C060 /* NEOColorPickerFavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDE25E168E01550081C060 /* NEOColorPickerFavoritesViewController.xib */; };
@@ -47,9 +47,9 @@
 		9EBDE220168DFCAF0081C060 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9EBDE222168DFCAF0081C060 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9EBDE224168DFCAF0081C060 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9EBDE226168DFCAF0081C060 /* NEOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEOViewController.h; sourceTree = "<group>"; };
-		9EBDE227168DFCAF0081C060 /* NEOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEOViewController.m; sourceTree = "<group>"; };
-		9EBDE22A168DFCAF0081C060 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NEOViewController.xib; sourceTree = "<group>"; };
+		9EBDE226168DFCAF0081C060 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		9EBDE227168DFCAF0081C060 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		9EBDE22A168DFCAF0081C060 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TestViewController.xib; sourceTree = "<group>"; };
 		9EBDE25A168E01550081C060 /* NEOColorPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerBaseViewController.h; sourceTree = "<group>"; };
 		9EBDE25B168E01550081C060 /* NEOColorPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOColorPickerBaseViewController.m; sourceTree = "<group>"; };
 		9EBDE25C168E01550081C060 /* NEOColorPickerFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOColorPickerFavoritesViewController.h; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 			children = (
 				9EBDE21D168DFCAF0081C060 /* NEOAppDelegate.h */,
 				9EBDE21E168DFCAF0081C060 /* NEOAppDelegate.m */,
-				9EBDE226168DFCAF0081C060 /* NEOViewController.h */,
-				9EBDE227168DFCAF0081C060 /* NEOViewController.m */,
-				9EBDE229168DFCAF0081C060 /* NEOViewController.xib */,
+				9EBDE226168DFCAF0081C060 /* TestViewController.h */,
+				9EBDE227168DFCAF0081C060 /* TestViewController.m */,
+				9EBDE229168DFCAF0081C060 /* TestViewController.xib */,
 				9EBDE215168DFCAF0081C060 /* Supporting Files */,
 			);
 			path = ColorPickerExample;
@@ -226,7 +226,7 @@
 				9EBDE221168DFCAF0081C060 /* Default.png in Resources */,
 				9EBDE223168DFCAF0081C060 /* Default@2x.png in Resources */,
 				9EBDE225168DFCAF0081C060 /* Default-568h@2x.png in Resources */,
-				9EBDE22B168DFCAF0081C060 /* NEOViewController.xib in Resources */,
+				9EBDE22B168DFCAF0081C060 /* TestViewController.xib in Resources */,
 				9EBDE26D168E01550081C060 /* NEOColorPickerFavoritesViewController.xib in Resources */,
 				9EBDE270168E01550081C060 /* NEOColorPickerHSLViewController.xib in Resources */,
 				9EBDE272168E01550081C060 /* NEOColorPickerHueGridViewController.xib in Resources */,
@@ -244,7 +244,7 @@
 			files = (
 				9EBDE21B168DFCAF0081C060 /* main.m in Sources */,
 				9EBDE21F168DFCAF0081C060 /* NEOAppDelegate.m in Sources */,
-				9EBDE228168DFCAF0081C060 /* NEOViewController.m in Sources */,
+				9EBDE228168DFCAF0081C060 /* TestViewController.m in Sources */,
 				9EBDE26B168E01550081C060 /* NEOColorPickerBaseViewController.m in Sources */,
 				9EBDE26C168E01550081C060 /* NEOColorPickerFavoritesViewController.m in Sources */,
 				9EBDE26E168E01550081C060 /* NEOColorPickerGradientView.m in Sources */,
@@ -266,12 +266,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9EBDE229168DFCAF0081C060 /* NEOViewController.xib */ = {
+		9EBDE229168DFCAF0081C060 /* TestViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9EBDE22A168DFCAF0081C060 /* en */,
 			);
-			name = NEOViewController.xib;
+			name = TestViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -368,6 +368,7 @@
 				9EBDE230168DFCAF0081C060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

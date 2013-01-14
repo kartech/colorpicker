@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NEOViewController : UIViewController
+@interface TestViewController : UIViewController
 
 - (IBAction)buttonPressPickColor:(id)sender;
 

@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class NEOViewController;
+@class TestViewController;
 
 @interface NEOAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) NEOViewController *viewController;
+@property (strong, nonatomic) TestViewController *viewController;
 
 @end

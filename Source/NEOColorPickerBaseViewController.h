@@ -20,8 +20,6 @@
 */
 
 
-#import "NEOViewController.h"
-
 @class NEOColorPickerBaseViewController;
 
 @protocol NEOColorPickerViewControllerDelegate <NSObject>
@@ -49,7 +47,7 @@
 @end
 
 
-@interface NEOColorPickerBaseViewController : NEOViewController
+@interface NEOColorPickerBaseViewController : UIViewController
 
 @property (nonatomic, weak) id <NEOColorPickerViewControllerDelegate> delegate;
 

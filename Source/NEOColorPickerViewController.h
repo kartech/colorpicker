@@ -22,7 +22,6 @@
  */
 
 
-#import "NEOViewController.h"
 #import "NEOColorPickerBaseViewController.h"
 
 

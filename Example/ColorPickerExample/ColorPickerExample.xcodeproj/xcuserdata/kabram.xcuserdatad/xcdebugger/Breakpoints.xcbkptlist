@@ -12,9 +12,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "32"
-         endingLineNumber = "32"
-         landmarkName = "-initWithNibName:bundle:"
-         landmarkType = "5">
+         endingLineNumber = "32">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
