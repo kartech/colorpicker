@@ -37,7 +37,7 @@ Assuming you want to launch the view controller in response to a button being cl
 
     NEOColorPickerViewController *controller = [[NEOColorPickerViewController alloc] init];
     controller.delegate = self;
-    controller.currentColor = <some initial color reference>;
+    controller.selectedColor = <some initial color reference>;
     controller.dialogTitle = @"My dialog title";
     
     [self presentViewController:controller animated:YES completion:nil];
