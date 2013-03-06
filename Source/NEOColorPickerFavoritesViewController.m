@@ -115,9 +115,13 @@
     int row = (int)((point.y - 8) / 48);
     int column = (int)((delta - 8) / 78);
     int index = 24 * page + row * 4 + column;
-    self.selectedColor = [[NEOColorPickerFavoritesManager instance].favoriteColors objectAtIndex:index];
-    self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
-    [self.selectedColorLayer setNeedsDisplay];
+    
+    if (index < [[NEOColorPickerFavoritesManager instance].favoriteColors count])
+    {
+        self.selectedColor = [[NEOColorPickerFavoritesManager instance].favoriteColors objectAtIndex:index];
+        self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
+        [self.selectedColorLayer setNeedsDisplay];
+    }
 }
 
 
