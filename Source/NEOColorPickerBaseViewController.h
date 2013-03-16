@@ -27,6 +27,8 @@
 @required
 - (void) colorPickerViewController:(NEOColorPickerBaseViewController *) controller didSelectColor:(UIColor *)color;
 - (void) colorPickerViewControllerDidCancel:(NEOColorPickerBaseViewController *)controller;
+@optional
+- (void) colorPickerViewController:(NEOColorPickerBaseViewController *) controller didChangeColor:(UIColor *)color;
 
 @end
 
@@ -50,7 +52,6 @@
 
 @property (nonatomic, weak) id <NEOColorPickerViewControllerDelegate> delegate;
 
-// Title to give the modal view.
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, assign) BOOL disallowOpacitySelection;
 @property (nonatomic, strong) NSString* selectedColorText;

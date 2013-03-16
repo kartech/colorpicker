@@ -47,8 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if (self.selectedColorText.length != 0)
-    {
+    if (self.selectedColorText.length != 0) {
         self.selectedColorLabel.text = self.selectedColorText;
     }
     
@@ -127,6 +126,9 @@
         self.selectedColor = [[NEOColorPickerFavoritesManager instance].favoriteColors objectAtIndex:index];
         self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
         [self.selectedColorLayer setNeedsDisplay];
+        if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
+            [self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
+        }
     }
 }
 

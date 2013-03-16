@@ -167,6 +167,10 @@
     [_colorLayer setNeedsDisplay];
     
     self.labelPreview.textColor = [[self.selectedColor neoComplementary] neoColorWithAlpha:1.0];
+
+    if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
+        [self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
+    }
 }
 
 

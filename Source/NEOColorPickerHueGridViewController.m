@@ -133,6 +133,10 @@
     self.selectedColor = [self.hueColors objectAtIndex:index];
     self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
     [self.selectedColorLayer setNeedsDisplay];
+
+    if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
+        [self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
+    }
 }
 
 

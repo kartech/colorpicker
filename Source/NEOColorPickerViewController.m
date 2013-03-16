@@ -35,6 +35,7 @@
 }
 
 @property (nonatomic, weak) CALayer *selectedColorLayer;
+@property (nonatomic, strong) UIColor* savedColor;
 
 @end
 
@@ -59,7 +60,6 @@
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -171,6 +171,7 @@
     controller.title = self.title;
     controller.disallowOpacitySelection = self.disallowOpacitySelection;
     controller.selectedColor = self.selectedColor;
+    self.savedColor = self.selectedColor;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -185,8 +186,19 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void) colorPickerViewController:(NEOColorPickerBaseViewController *) controller didChangeColor:(UIColor *)color {
+    self.selectedColor = color;
+    [self updateSelectedColor];
+}
+
 - (void)colorPickerViewControllerDidCancel:(NEOColorPickerBaseViewController *)controller {
     [self.navigationController popViewControllerAnimated:YES];
+
+    if (self.savedColor != nil) {
+        self.selectedColor = self.savedColor;
+        [self updateSelectedColor];
+        self.savedColor = nil;
+    }
 }
 
 - (IBAction)buttonPressHueGrid:(id)sender {
@@ -195,6 +207,7 @@
     controller.title = self.title;
     controller.selectedColor = self.selectedColor;
     controller.selectedColorText = self.selectedColorText;
+    self.savedColor = self.selectedColor;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -211,6 +224,7 @@
     controller.selectedColor = self.selectedColor;
     controller.title = (self.favoritesTitle.length == 0 ? @"Favorites" : self.favoritesTitle);
     controller.selectedColorText = self.selectedColorText;
+    self.savedColor = self.selectedColor;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

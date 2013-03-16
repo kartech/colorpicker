@@ -99,19 +99,17 @@
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(buttonPressCancel:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(buttonPressDone:)];
-    self.contentSizeForViewInPopover = CGSizeMake(320.0f, 480.0f);
+    self.contentSizeForViewInPopover = CGSizeMake(320.0f, 460.0f);
 }
 
 
 - (IBAction)buttonPressCancel:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.delegate colorPickerViewControllerDidCancel:self];
 }
 
 
 - (IBAction)buttonPressDone:(id)sender {
-    if (self.delegate) {
-        [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];
-    }
+    [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];
 }
 
 
