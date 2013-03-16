@@ -69,7 +69,7 @@
 					</object>
 					<object class="IBUIView" id="843158301">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">276</int>
+						<int key="NSvFlags">272</int>
 						<string key="NSFrame">{{0, 80}, {320, 299}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -80,7 +80,7 @@
 					</object>
 					<object class="IBUIButton" id="478082804">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">265</int>
+						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{260, 403}, {40, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -194,7 +194,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
+				<reference key="NSNextKeyView" ref="437202702"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
@@ -410,8 +410,6 @@
 					<string key="superclassName">NEOColorPickerBaseViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="buttonPressAddFavorite:">id</string>
-						<string key="buttonPressCancel:">id</string>
-						<string key="buttonPressDone:">id</string>
 						<string key="buttonPressFavorites:">id</string>
 						<string key="buttonPressHue:">id</string>
 						<string key="buttonPressHueGrid:">id</string>
@@ -419,14 +417,6 @@
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="buttonPressAddFavorite:">
 							<string key="name">buttonPressAddFavorite:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="buttonPressCancel:">
-							<string key="name">buttonPressCancel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="buttonPressDone:">
-							<string key="name">buttonPressDone:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="buttonPressFavorites:">
