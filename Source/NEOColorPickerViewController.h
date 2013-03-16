@@ -24,8 +24,6 @@
 
 #import "NEOColorPickerBaseViewController.h"
 
-
-
 @interface NEOColorPickerViewController : NEOColorPickerBaseViewController
 
 @property (weak, nonatomic) IBOutlet UIView *simpleColorGrid;
@@ -33,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonAddFavorite;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFavorites;
 @property (weak, nonatomic) IBOutlet UIButton *buttonHueGrid;
+@property (weak, nonatomic) IBOutlet UILabel *selectedColorLabel;
+@property (nonatomic, strong) NSString* favoritesTitle;
 
 - (IBAction)buttonPressHue:(id)sender;
 - (IBAction)buttonPressHueGrid:(id)sender;

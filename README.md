@@ -39,14 +39,18 @@ Assuming you want to launch the view controller in response to a button being cl
     controller.delegate = self;
     controller.selectedColor = <some initial color reference>;
     controller.dialogTitle = @"My dialog title";
-    
-    [self presentViewController:controller animated:YES completion:nil];
+    UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:navVC animated:YES completion:nil];
     
 Finally handle the color picker delegate callback when the color is selected. You can also implement an optional callback that is called when the color picker is dismissed:
 
     - (void) colorPickerViewController:(NEOColorPickerBaseViewController *)controller didSelectColor:(UIColor *)color {
         // Do something with the color.    
         self.view.backgroundColor = color;
+        [controller dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+    - (void) colorPickerViewControllerDidCancel:(NEOColorPickerBaseViewController *)controller {
         [controller dismissViewControllerAnimated:YES completion:nil];
     }
 
