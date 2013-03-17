@@ -46,7 +46,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect frame = CGRectMake(130, 65, 100, 40);
+
+    if (self.selectedColorText.length != 0) {
+        self.selectedColorLabel.text = self.selectedColorText;
+    }
+    
+    CGRect frame = CGRectMake(130, 16, 100, 40);
     UIImageView *checkeredView = [[UIImageView alloc] initWithFrame:frame];
     checkeredView.layer.cornerRadius = 6.0;
     checkeredView.layer.masksToBounds = YES;
@@ -54,7 +59,7 @@
     [self.view addSubview:checkeredView];
     
     CALayer *layer = [CALayer layer];
-    layer.frame = CGRectMake(130, 65, 100, 40);
+    layer.frame = CGRectMake(130, 16, 100, 40);
     layer.cornerRadius = 6.0;
     layer.shadowColor = [UIColor blackColor].CGColor;
     layer.shadowOffset = CGSizeMake(0, 2);
@@ -121,6 +126,9 @@
         self.selectedColor = [[NEOColorPickerFavoritesManager instance].favoriteColors objectAtIndex:index];
         self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
         [self.selectedColorLayer setNeedsDisplay];
+        if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
+            [self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
+        }
     }
 }
 

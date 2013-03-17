@@ -35,6 +35,7 @@
 }
 
 @property (nonatomic, weak) CALayer *selectedColorLayer;
+@property (nonatomic, strong) UIColor* savedColor;
 
 @end
 
@@ -60,13 +61,16 @@
     return self;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (!self.selectedColor) {
         self.selectedColor = [UIColor blackColor];
     }
-    
+
+    if (self.selectedColorText.length != 0)
+    {
+        self.selectedColorLabel.text = self.selectedColorText;
+    }
     self.simpleColorGrid.backgroundColor = [UIColor clearColor];
     
     [self.buttonHue setBackgroundColor:[UIColor clearColor]];
@@ -85,7 +89,7 @@
 //    [NTTAppDefaults setupSecondaryButton:self.buttonHueGrid];
     [self.buttonHueGrid setImage:[UIImage imageNamed:@"colorPicker.bundle/picker-grid"] forState:UIControlStateNormal];
     
-    CGRect frame = CGRectMake(130, 65, 100, 40);
+    CGRect frame = CGRectMake(130, 16, 100, 40);
     UIImageView *checkeredView = [[UIImageView alloc] initWithFrame:frame];
     checkeredView.layer.cornerRadius = 6.0;
     checkeredView.layer.masksToBounds = YES;
@@ -93,7 +97,7 @@
     [self.view addSubview:checkeredView];
     
     CALayer *layer = [CALayer layer];
-    layer.frame = CGRectMake(130, 65, 100, 40);
+    layer.frame = CGRectMake(130, 16, 100, 40);
     layer.cornerRadius = 6.0;
     layer.shadowColor = [UIColor blackColor].CGColor;
     layer.shadowOffset = CGSizeMake(0, 2);
@@ -122,7 +126,6 @@
 
 
 - (void)viewDidUnload {
-    [self setNavigationBar:nil];
     [self setSimpleColorGrid:nil];
     [self setButtonHue:nil];
     [self setButtonAddFavorite:nil];
@@ -154,13 +157,8 @@
 
 
 - (IBAction)buttonPressCancel:(id)sender {
-    if ([self.delegate respondsToSelector:@selector(colorPickerViewControllerDidCancel:)]) {
-        [self.delegate colorPickerViewControllerDidCancel:self];
-    } else {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
+    [self.delegate colorPickerViewControllerDidCancel:self];
 }
-
 
 - (IBAction)buttonPressDone:(id)sender {
     [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];
@@ -170,10 +168,11 @@
 - (IBAction)buttonPressHue:(id)sender {
     NEOColorPickerHSLViewController *controller = [[NEOColorPickerHSLViewController alloc] init];
     controller.delegate = self;
-    controller.dialogTitle = self.dialogTitle;
+    controller.title = self.title;
     controller.disallowOpacitySelection = self.disallowOpacitySelection;
     controller.selectedColor = self.selectedColor;
-    [self presentViewController:controller animated:YES completion:nil];
+    self.savedColor = self.selectedColor;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
@@ -184,18 +183,33 @@
         self.selectedColor = color;
     }
     [self updateSelectedColor];
-    [controller dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void) colorPickerViewController:(NEOColorPickerBaseViewController *) controller didChangeColor:(UIColor *)color {
+    self.selectedColor = color;
+    [self updateSelectedColor];
+}
+
+- (void)colorPickerViewControllerDidCancel:(NEOColorPickerBaseViewController *)controller {
+    [self.navigationController popViewControllerAnimated:YES];
+
+    if (self.savedColor != nil) {
+        self.selectedColor = self.savedColor;
+        [self updateSelectedColor];
+        self.savedColor = nil;
+    }
+}
 
 - (IBAction)buttonPressHueGrid:(id)sender {
     NEOColorPickerHueGridViewController *controller = [[NEOColorPickerHueGridViewController alloc] init];
     controller.delegate = self;
-    controller.dialogTitle = self.dialogTitle;
+    controller.title = self.title;
     controller.selectedColor = self.selectedColor;
-    [self presentViewController:controller animated:YES completion:nil];
+    controller.selectedColorText = self.selectedColorText;
+    self.savedColor = self.selectedColor;
+    [self.navigationController pushViewController:controller animated:YES];
 }
-
 
 - (IBAction)buttonPressAddFavorite:(id)sender {
     [[NEOColorPickerFavoritesManager instance] addFavorite:self.selectedColor];
@@ -208,8 +222,10 @@
     NEOColorPickerFavoritesViewController *controller = [[NEOColorPickerFavoritesViewController alloc] init];
     controller.delegate = self;
     controller.selectedColor = self.selectedColor;
-    controller.dialogTitle = @"Favorites";
-    [self presentViewController:controller animated:YES completion:nil];
+    controller.title = (self.favoritesTitle.length == 0 ? @"Favorites" : self.favoritesTitle);
+    controller.selectedColorText = self.selectedColorText;
+    self.savedColor = self.selectedColor;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end
