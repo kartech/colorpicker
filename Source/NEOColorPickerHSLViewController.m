@@ -52,7 +52,6 @@
     
     [super viewDidLoad];
     
-    self.navigationBar.topItem.title = self.dialogTitle;
     self.checkeredView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:CP_RESOURCE_CHECKERED_IMAGE]];
     self.hueImageView.image = [UIImage imageNamed:CP_RESOURCE_HUE_CIRCLE];
     
@@ -168,12 +167,15 @@
     [_colorLayer setNeedsDisplay];
     
     self.labelPreview.textColor = [[self.selectedColor neoComplementary] neoColorWithAlpha:1.0];
+
+    if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
+        [self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
+    }
 }
 
 
 - (void)viewDidUnload {
     _colorLayer = nil;
-    [self setNavigationBar:nil];
     [self setHueCrosshair:nil];
     [self setGradientViewSaturation:nil];
     [self setGradientViewLuminosity:nil];
