@@ -40,9 +40,10 @@
     NEOColorPickerViewController *controller = [[NEOColorPickerViewController alloc] init];
     controller.delegate = self;
     controller.selectedColor = self.currentColor;
-    controller.dialogTitle = @"Example";
+    controller.title = @"Example";
+	UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:controller];
     
-    [self presentViewController:controller animated:YES completion:nil];
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
 
@@ -50,4 +51,9 @@
     self.view.backgroundColor = color;
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)colorPickerViewControllerDidCancel:(NEOColorPickerBaseViewController *)controller {
+	[controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
