@@ -1,2 +1,12 @@
 .DS_Store
 WorkspaceSettings.xcsettings
+
+Example/ColorPickerExample/.DS_Store
+
+Source/.DS_Store
+
+*.xcuserstate
+
+*.xcscheme
+
+Example/ColorPickerExample/ColorPickerExample.xcodeproj/xcuserdata/jeffjohnson.xcuserdatad/xcschemes/xcschememanagement.plist

@@ -88,7 +88,7 @@
     int index = 0;
     for (int i = 0; i < 12; i++) {
         int colorCount = NEOColorPicker4InchDisplay() ? 32 : 24;
-        for (int x = 0; x < colorCount; x++) {
+        for (int x = 0; x < colorCount && index < self.hueColors.count; x++) {
             CALayer *layer = [CALayer layer];
             layer.cornerRadius = 6.0;
             UIColor *color = [self.hueColors objectAtIndex:index++];
@@ -130,13 +130,15 @@
     int column = (int)((delta - 8) / 78);
     int colorCount = NEOColorPicker4InchDisplay() ? 32 : 24;
     int index = colorCount * page + row * 4 + column;
-    self.selectedColor = [self.hueColors objectAtIndex:index];
-    self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
-    [self.selectedColorLayer setNeedsDisplay];
+	if (index < self.hueColors.count) {
+		self.selectedColor = [self.hueColors objectAtIndex:index];
+		self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
+		[self.selectedColorLayer setNeedsDisplay];
 
-    if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
-        [self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
-    }
+		if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {
+			[self.delegate colorPickerViewController:self didChangeColor:self.selectedColor];
+		}
+	}
 }
 
 

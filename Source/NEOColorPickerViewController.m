@@ -107,7 +107,7 @@
     self.selectedColorLayer = layer;
     
     int colorCount = NEOColorPicker4InchDisplay() ? 28 : 20;
-    for (int i = 0; i < colorCount; i++) {
+    for (int i = 0; i < colorCount && i < _colorArray.count; i++) {
         CALayer *layer = [CALayer layer];
         layer.cornerRadius = 6.0;
         UIColor *color = [_colorArray objectAtIndex:i];
@@ -151,7 +151,10 @@
     int row = (int)((point.y - 8) / 48);
     int column = (int)((point.x - 8) / 78);
     int index = row * 4 + column;
-    self.selectedColor = [_colorArray objectAtIndex:index];
+	
+	if (index < _colorArray.count) {
+		self.selectedColor = [_colorArray objectAtIndex:index];
+	}
     [self updateSelectedColor];
 }
 
