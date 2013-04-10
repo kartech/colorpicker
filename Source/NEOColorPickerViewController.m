@@ -160,6 +160,7 @@
 
 
 - (IBAction)buttonPressCancel:(id)sender {
+    self.selectedColor = nil;
     [self.delegate colorPickerViewControllerDidCancel:self];
 }
 
