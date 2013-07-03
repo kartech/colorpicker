@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html> 
+<html>
+
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Neovera Color Picker : An open-source iOS color picker with quick-select, hue-grid and HSL wheel. You can also define transparency and save favorite colors." />
+    <meta name="description" content="Color Picker : An open-source iOS color picker with quick-select, hue-grid and HSL wheel. You can also define transparency and save favorite colors." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Neovera Color Picker</title>
+    <title>Color Picker</title>
   </head>
 
   <body>
@@ -15,14 +16,14 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/neovera/colorpicker">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/kartech/colorpicker">View on GitHub</a>
 
-          <h1 id="project_title">Neovera Color Picker</h1>
+          <h1 id="project_title">Color Picker</h1>
           <h2 id="project_tagline">An open-source iOS color picker with quick-select, hue-grid and HSL wheel. You can also define transparency and save favorite colors.</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/neovera/colorpicker/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/neovera/colorpicker/tarball/master">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="https://github.com/kartech/colorpicker/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kartech/colorpicker/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -30,24 +31,28 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>Neovera Color Picker</h1>
+        <h1>
+<a name="color-picker" class="anchor" href="#color-picker"><span class="octicon octicon-link"></span></a>Color Picker</h1>
 
-<h2>Background</h2>
+<h2>
+<a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h2>
 
-<p>A color picker is the most conspicuously absent component in the collection of built-in controls provided by Apple in the iOS library. There are many open-source components that have sprung up to fill the gap. This component was created for the <a href="https://itunes.apple.com/us/app/toonthat/id584478951?ls=1&amp;mt=8">ToonThat</a> application as we didn't find the level of flexibility and feature-set in the others.</p>
+<p>A color picker is the most conspicuously absent component in the collection of built-in controls provided by Apple in the iOS library. There are many open-source components that have sprung up to fill the gap. This component was created for the [ToonThat][<a href="https://itunes.apple.com/us/app/toonthat/id584478951?ls=1&amp;mt=8">https://itunes.apple.com/us/app/toonthat/id584478951?ls=1&amp;mt=8</a>] application as we didn't find the level of flexibility and feature-set in the others.</p>
 
-<h2>Screenshots</h2>
+<h2>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
 
-<table cellpadding="5" border="0" width="100%" style="border:0px">
+<table cellpadding="5" border="0" width="100%">
 <tr>
-<td style="border:0px"><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image1.png?raw=true"></td>
-        <td style="border:0px"><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image2.png?raw=true"></td>
+<td><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image1.png?raw=true"></td>
+        <td><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image2.png?raw=true"></td>
 </tr>
 <tr>
-<td style="border:0px"><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image3.png?raw=true"></td>
-        <td style="border:0px"></td>
+<td><img width="256" height="384" src="https://github.com/neovera/colorpicker/blob/master/etc/image3.png?raw=true"></td>
+        <td></td>
 </tr>
-</table><h2>Features</h2>
+</table><h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
 
 <ul>
 <li>Shows a simple color pallete (simplifies the simple case).</li>
@@ -58,9 +63,8 @@
 <li>Allows users to save their favorite colors. Favorites are stored in a file in the Documents directory.</li>
 <li>Simple delegate model.</li>
 <li>You can specify current color selection and title for header.</li>
-</ul><h2>Usage</h2>
-
-<p>Copy the files within the Source folder into your project. The colorPicker.bundle file contains the graphical resources.</p>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>In your view controller where you want to invoke the color picker, first implement the methods of the delegate:</p>
 
@@ -71,7 +75,7 @@
 
 <pre><code>NEOColorPickerViewController *controller = [[NEOColorPickerViewController alloc] init];
 controller.delegate = self;
-controller.selectedColor = &lt;some initial color reference&gt;;
+controller.currentColor = &lt;some initial color reference&gt;;
 controller.dialogTitle = @"My dialog title";
 
 [self presentViewController:controller animated:YES completion:nil];
@@ -86,25 +90,22 @@ controller.dialogTitle = @"My dialog title";
 }
 </code></pre>
 
-<h2>License </h2>
+<h2>
+<a name="license-" class="anchor" href="#license-"><span class="octicon octicon-link"></span></a>License </h2>
 
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a></p>
-
-<h2>About Neovera</h2>
-
-<p><a href="http://www.neovera.com">Neovera</a> is a leader in complex hosting and private cloud infrastructure. We are committed to delivering results through the innovative use of technology. Our clients range from Non-Profit Organizations to Fortune-500 companies. Our goal is to help clients achieve superior return on investment by helping with the Architecture, Implementation and Management of hosted solutions.</p>
-
-</section>
-</div>
+      </section>
+    </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Neovera Color Picker maintained by <a href="https://github.com/neovera">neovera</a></p>
+        <p class="copyright">Color Picker maintained by <a href="https://github.com/kartech">kartech</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
 
+    
 
   </body>
 </html>
