@@ -1,4 +1,4 @@
-Neovera Color Picker
+Color Picker
 ====================
 
 Background
