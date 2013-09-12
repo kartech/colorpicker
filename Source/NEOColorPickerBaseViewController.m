@@ -98,9 +98,7 @@
     [super viewDidLoad];
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(buttonPressCancel:)];
-    self.navigationItem.leftBarButtonItem.tintColor = UIColor.whiteColor;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(buttonPressDone:)];
-    self.navigationItem.rightBarButtonItem.tintColor = UIColor.whiteColor;
 
     self.contentSizeForViewInPopover = CGSizeMake(320.0f, 460.0f);
 
