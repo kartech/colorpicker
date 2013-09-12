@@ -98,8 +98,18 @@
     [super viewDidLoad];
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(buttonPressCancel:)];
+    self.navigationItem.leftBarButtonItem.tintColor = UIColor.whiteColor;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(buttonPressDone:)];
+    self.navigationItem.rightBarButtonItem.tintColor = UIColor.whiteColor;
+
     self.contentSizeForViewInPopover = CGSizeMake(320.0f, 460.0f);
+
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 
 
