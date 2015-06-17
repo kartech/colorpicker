@@ -93,10 +93,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                    <rect key="frame" x="41" y="162" width="94" height="21"/>
+                    <rect key="frame" x="41" y="162" width="30" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="52"/>
-                        <constraint firstAttribute="width" constant="94" id="53"/>
+                        <constraint firstAttribute="width" constant="30" id="53"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,15 +219,12 @@
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="32" firstAttribute="baseline" secondItem="30" secondAttribute="baseline" id="71"/>
-                <constraint firstItem="23" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="41" id="72"/>
                 <constraint firstItem="50" firstAttribute="centerX" secondItem="17" secondAttribute="centerX" id="73"/>
                 <constraint firstItem="30" firstAttribute="leading" secondItem="26" secondAttribute="leading" id="74"/>
                 <constraint firstItem="31" firstAttribute="firstBaseline" secondItem="33" secondAttribute="firstBaseline" id="75"/>
                 <constraint firstItem="17" firstAttribute="top" secondItem="1" secondAttribute="top" constant="366" id="76"/>
-                <constraint firstItem="50" firstAttribute="centerX" secondItem="24" secondAttribute="centerX" id="77"/>
                 <constraint firstItem="27" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="1" id="79"/>
                 <constraint firstItem="14" firstAttribute="top" secondItem="27" secondAttribute="top" id="80"/>
-                <constraint firstItem="9" firstAttribute="centerX" secondItem="24" secondAttribute="centerX" id="81"/>
                 <constraint firstAttribute="trailing" secondItem="26" secondAttribute="trailing" id="82"/>
                 <constraint firstItem="23" firstAttribute="top" secondItem="1" secondAttribute="top" constant="162" id="83"/>
                 <constraint firstItem="30" firstAttribute="trailing" secondItem="26" secondAttribute="trailing" id="84"/>
@@ -243,7 +240,6 @@
                 <constraint firstItem="30" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" id="94"/>
                 <constraint firstItem="20" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" id="95"/>
                 <constraint firstItem="32" firstAttribute="top" secondItem="16" secondAttribute="top" id="96"/>
-                <constraint firstItem="24" firstAttribute="centerY" secondItem="9" secondAttribute="centerY" id="97"/>
                 <constraint firstItem="17" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="98"/>
                 <constraint firstItem="21" firstAttribute="leading" secondItem="16" secondAttribute="leading" id="99"/>
                 <constraint firstItem="14" firstAttribute="top" secondItem="26" secondAttribute="top" id="100"/>
@@ -259,7 +255,6 @@
                 <constraint firstItem="32" firstAttribute="leading" secondItem="33" secondAttribute="leading" id="110"/>
                 <constraint firstItem="32" firstAttribute="firstBaseline" secondItem="30" secondAttribute="firstBaseline" id="111"/>
                 <constraint firstItem="26" firstAttribute="baseline" secondItem="27" secondAttribute="baseline" id="112"/>
-                <constraint firstAttribute="bottom" secondItem="22" secondAttribute="bottom" constant="92" id="113"/>
                 <constraint firstItem="31" firstAttribute="baseline" secondItem="33" secondAttribute="baseline" id="114"/>
                 <constraint firstItem="27" firstAttribute="firstBaseline" secondItem="26" secondAttribute="firstBaseline" id="115"/>
                 <constraint firstItem="16" firstAttribute="bottom" secondItem="32" secondAttribute="bottom" id="116"/>
@@ -269,11 +264,16 @@
                 <constraint firstItem="31" firstAttribute="leading" secondItem="30" secondAttribute="leading" id="120"/>
                 <constraint firstItem="31" firstAttribute="trailing" secondItem="30" secondAttribute="trailing" id="121"/>
                 <constraint firstItem="14" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" id="122"/>
-                <constraint firstItem="23" firstAttribute="centerX" secondItem="12" secondAttribute="centerX" id="123"/>
+                <constraint firstItem="23" firstAttribute="centerX" secondItem="12" secondAttribute="centerX" constant="-32.5" id="123"/>
                 <constraint firstItem="20" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="42" id="124"/>
+                <constraint firstItem="21" firstAttribute="leading" secondItem="23" secondAttribute="leading" constant="2" id="3mc-v1-2QX"/>
                 <constraint firstItem="26" firstAttribute="leading" secondItem="14" secondAttribute="trailing" constant="2" id="7ZY-ex-PFq"/>
+                <constraint firstAttribute="centerX" secondItem="24" secondAttribute="centerX" id="AOi-pI-23f"/>
                 <constraint firstItem="14" firstAttribute="leading" secondItem="27" secondAttribute="trailing" constant="1" id="Nc8-IJ-RXN"/>
+                <constraint firstItem="17" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="-2" id="PdI-GQ-7Ds"/>
                 <constraint firstItem="20" firstAttribute="leading" secondItem="14" secondAttribute="leading" id="fzY-zS-BDF"/>
+                <constraint firstItem="24" firstAttribute="centerY" secondItem="9" secondAttribute="centerY" id="gdx-T9-Ipl"/>
+                <constraint firstItem="24" firstAttribute="centerX" secondItem="9" secondAttribute="centerX" id="q9r-sa-MR6"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
