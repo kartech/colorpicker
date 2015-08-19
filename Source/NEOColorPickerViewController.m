@@ -176,6 +176,7 @@
     controller.disallowOpacitySelection = self.disallowOpacitySelection;
     controller.selectedColor = self.selectedColor;
     self.savedColor = self.selectedColor;
+    controller.modalPresentationStyle = UIModalPresentationCurrentContext;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -212,6 +213,7 @@
     controller.selectedColor = self.selectedColor;
     controller.selectedColorText = self.selectedColorText;
     self.savedColor = self.selectedColor;
+    controller.modalPresentationStyle = UIModalPresentationCurrentContext;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -229,6 +231,7 @@
     controller.title = (self.favoritesTitle.length == 0 ? @"Favorites" : self.favoritesTitle);
     controller.selectedColorText = self.selectedColorText;
     self.savedColor = self.selectedColor;
+    controller.modalPresentationStyle = UIModalPresentationCurrentContext;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
