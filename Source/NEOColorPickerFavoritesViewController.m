@@ -71,12 +71,12 @@
     
     NSOrderedSet *colors = [NEOColorPickerFavoritesManager instance].favoriteColors;
     UIColor *pattern = [UIColor colorWithPatternImage:[UIImage imageNamed:@"colorPicker.bundle/color-picker-checkered"]];
-    int count = [colors count];
-    for (int i = 0; i < count; i++) {
-        int page = i / 24;
-        int x = i % 24;
-        int column = x % 4;
-        int row = x / 4;
+    NSInteger count = [colors count];
+    for (NSInteger i = 0; i < count; i++) {
+        NSInteger page = i / 24;
+        NSInteger x = i % 24;
+        NSInteger column = x % 4;
+        NSInteger row = x / 4;
         CGRect frame = CGRectMake(page * 320 + 8 + (column * 78), 8 + row * 48, 70, 40);
         
         UIImageView *checkeredView = [[UIImageView alloc] initWithFrame:frame];
@@ -93,7 +93,7 @@
         [self setupShadow:layer];
         [self.scrollView.layer addSublayer:layer];
     }
-    int pages = (count - 1) / 24 + 1;
+    NSInteger pages = (count - 1) / 24 + 1;
     
     self.scrollView.contentSize = CGSizeMake(pages * 320, 296);
     self.scrollView.delegate = self;
@@ -114,12 +114,12 @@
 
 - (void) colorGridTapped:(UITapGestureRecognizer *)recognizer {
     CGPoint point = [recognizer locationInView:self.scrollView];
-    int page = point.x / 320;
-    int delta = (int)point.x % 320;
+    NSInteger page = point.x / 320;
+    NSInteger delta = (int)point.x % 320;
     
-    int row = (int)((point.y - 8) / 48);
-    int column = (int)((delta - 8) / 78);
-    int index = 24 * page + row * 4 + column;
+    NSInteger row = (int)((point.y - 8) / 48);
+    NSInteger column = (int)((delta - 8) / 78);
+    NSInteger index = 24 * page + row * 4 + column;
     
     if (index < [[NEOColorPickerFavoritesManager instance].favoriteColors count])
     {
